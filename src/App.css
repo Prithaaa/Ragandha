@@ -1,38 +1,422 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Pacifico&family=Source+Sans+Pro:wght@200;300;400;600;700&family=Source+Serif+Pro:wght@200;300;400;600;700&family=Syne+Mono&family=Tenor+Sans&family=Xanh+Mono&display=swap');
+
+*
+{
+ margin: 0;
+ padding: 0;
+scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+header{
+  background-color: #E38B29;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
+  padding: 2% 6%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
+}
+.login{
+  float: right;
+}
+nav img{
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: center;
+  
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 17px;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+header a.icon{
+color: #fff;
+float: right;
+line-height: 50px;
+font-size: 24px;
+cursor: pointer;
+display: none;
 }
+
+.sub-menu-1{
+  display: none;
+}
+.nav-links ul li:hover .sub-menu-1{
+  display: block;
+  position: absolute;
+  background: #c58c46;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+.nav-links ul li:hover .sub-menu-1 ul{
+   display: block;
+   margin: 10px;
+}
+.nav-links ul li:hover .sub-menu-1 ul li{
+  width: 150px;
+  padding-left: 10px;
+  border-bottom: 1px  #fff;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+.nav-links ul li:hover .sub-menu-1 ul li:last-child{
+  border-bottom: none;
+}
+.nav-links ul li:hover .sub-menu-1 ul li a:hover{
+  color: #51050F;
+}
+
+
+
+
+
+@media(max-width:991px){
+  
+     header nav{
+     max-width: 100%;
+     margin: auto;
+     height: 120px;
+     color: white;
+     border-radius: 10px;
+    }
+
+    .nav-links{
+      position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateX(100%);
+    transition: 0.5s;
+     }
+    .nav-links ul {
+      flex-direction: column;
+    }
+
+    .nav-links #mylinks{
+      display: none;
+    }
+    .nav-links a{
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+    .nav-links a.icon{
+      background: black;
+     display: flex;
+     position: absolute;
+     right: 0;
+     top: 0;
+    }
+    .nav-links a:hover{
+      background-color: #ddd;
+      color: black;
+    }
+    .active{
+      background-color: #04AA6D;
+      color: white;
+    }
+}
+
+
+.roomfresher{
+  position: absolute;
+  top: 250px;
+  left: 100px;
+ vertical-align: top;
+}
+
+.product h1{
+  font-family: "Tenor-Sans";
+ padding-top: 60px;
+ margin-right: 160px;
+  text-align: right;
+  text-decoration: underline #A64B2A;
+}
+.product p{
+  float: right;
+  font-family: "source-serif-pro";
+  font-size: larger;
+  padding-top: 40px;
+  margin-right: 50px; 
+ 
+}
+@media (max-width:991px) {
+ .roomfresher{
+  top: 500px;
+  align-content: center;
+ }
+}
+
+
+ 
+ .ragandhacologne h2{
+text-align: right;
+padding-top: 500px;
+margin-right: 180px;
+font-family: "Syne-Mono";
+text-decoration: underline #A64B2A
+ }
+ .ragandhacologne p{
+ padding-left: 780px;
+ padding-top: 20px;
+ margin-right:100px ;
+ text-align: justify;
+ font-family: "Manrope";
+ font-size: large;
+ }
+ .vl {
+  border-left: 2px solid #D7A86E;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 800px;
+}
+@media (max-width:700px){
+  .ragandhacologne p{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: justify;
+    font-family: Manrope;
+    font-size: small;
+}
+}
+
+h3{
+  font-family: "Manrope";
+  text-align: center;
+  padding-top: 150px;
+  font-size: xx-large;
+  
+
+}
+
+.cowimg{
+ float: right;
+ margin-right: 80px;
+}
+
+ .cow p{
+ float: left;
+ font-family: "manrope";
+ padding-top: 130px;
+ margin-left: 100px;
+ font-size: large;
+ 
+ }
+ .container{
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .container .box{
+  overflow: hidden;
+  transition: 0.5s;
+ }
+ .container .box:hover{
+  z-index: 1;
+  transform: scale(1);
+  box-shadow: 0 25px 40px rgba(0,0,0,.5);
+ }
+ .container .content {
+  position: absolute;
+  bottom: 0;
+  /* Black background with 0.5 opacity */
+  color: #fffefe;
+  font-family: "manrope";
+  padding: 15px;
+}
+
+.container .box .content h4{
+  color: #fff;
+  transition: 0.4s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+}
+.container .box:hover .content h4{
+color: #fff;
+transform: translateY(0);
+transition-delay: 0.2s;
+}
+
+/*footer*/
+footer{
+ align-items: center;
+ flex-direction: column;
+  position: relative;
+  width: 92.3%;
+  height: auto;
+  padding: 50px ;
+  background: #D7A86E;
+  display: flex;
+  justify-content: space-between;
+   flex-wrap: wrap;
+   
+}
+footer .containers{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+ 
+}
+footer .containers .sec{
+  margin-right: 30px;
+}
+footer .containers .sec.aboutus{
+  width: 40%;
+}
+footer .containers h5{
+  position: relative;
+  color:#8E3200;;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: x-large;
+
+}
+footer .containers h5:before{
+  content: '';
+  position: absolute;
+  bottom:-5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #8E3200;
+}
+footer  p{
+  color:#51050F;
+  font-family: "manrope";
+}
+.sci{
+  margin-top: 20px;
+  display: flex;
+  
+}
+.sci li{
+  list-style: none;
+}
+.sci li a {
+display: inline-block;
+width: 40px;
+height: 40px;
+background-color: rgb(230, 217, 217);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 10px;
+text-decoration: none;
+border-radius: 4px;
+}
+.sci li a:hover{
+ background: #ffffff;
+
+}
+.sci li a .fa{
+  color: rgb(180, 157, 157);
+  font-size: 20px;
+}
+
+.quicklinks{
+  position: relative;
+  width: 30%;
+  padding-left: 50px;
+}
+.quicklinks ul li{
+  list-style: none;
+}
+.quicklinks ul li a{
+  color: #51050F;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.quicklinks ul li a:hover{
+  color: #ffffff;
+}
+.contact{
+  width:100%;
+  margin-right: 0 !important;
+
+}
+.contact .info{
+  position: relative;
+}
+.contact .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+  color:  rgb(141, 72, 136);
+  font: 20px;
+  margin-right: 10px;
+}
+.contact .info li  span{
+  color: #51050F;
+}
+.contact .info li a {
+  color: #51050F;
+  text-decoration: none;
+  }
+.contact .info li a:hover{
+    color: #fff;
+  }
+
+  @media (max-width: 991px)
+  {
+    footer{
+      padding: 40px;
+    }
+    footer .containers{
+      flex-direction: column;
+    }
+    footer .containers .sec{
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    footer .containers  .sec.aboutus,
+    .quicklinks, .contact{
+      width: 100%;
+    }
+  }
